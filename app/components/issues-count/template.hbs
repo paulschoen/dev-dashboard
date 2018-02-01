@@ -1,0 +1,15 @@
+<div class="issues">
+  <div class="animated fadeIn repo-title ui segment">
+    <h1>{{title}}</h1>
+  </div>
+  {{#if data}}
+    <div class="animated fadeIn issues-grid">
+      {{#each data as |issue|}}
+        <div class="issue-panel ui segment">
+          <h1 class="board-title">{{issue.name}}</h1>
+          <h1 class="count">{{issue.issueLength}}</h1>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

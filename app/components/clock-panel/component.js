@@ -7,18 +7,18 @@ export default Ember.Component.extend({
 
   namespace: '/',
 
-  didInsertElement() {
-    this._super(...arguments);
-
-    /*
-      2. The next step you need to do is to create your actual socketIO.
-    */
-    const socket = this.get('socketIOService').socketFor('http://localhost:8000/');
-
-    socket.on('issueMoved ', () => {
-      console.log("ISSUED MOVED");
-    });
-  },
+  // didInsertElement() {
+  //   this._super(...arguments);
+  //
+  //   /*
+  //     2. The next step you need to do is to create your actual socketIO.
+  //   */
+  //   const socket = this.get('socketIOService').socketFor('http://localhost:8000/');
+  //
+  //   socket.on('issueMoved ', () => {
+  //     console.log("ISSUED MOVED");
+  //   });
+  // },
 
   date: Ember.computed({
     get(){
@@ -33,6 +33,9 @@ export default Ember.Component.extend({
       if (hour > 12) {
         return hour - 12;
       } else {
+        if (hour === 0) {
+          return 12;
+        }
         return hour;
       }
     }
