@@ -1,0 +1,102 @@
+.container {
+	height: 100%;
+	width: 100%;
+  position: relative;
+}
+
+iframe {
+	border: 0;
+}
+
+.streams-list {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.streams-list > ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.streams-list > ul > li {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	float: left;
+	opacity: 0;
+}
+
+.streams-list > ul > li.active {
+	top: 0;
+	opacity: 1;
+	transition: 0.7s opacity;
+}
+
+.streams-list > ul > li img,
+.streams-list > ul > li object,
+.streams-list > ul > li iframe {
+	height: 100%;
+	width: 100%;
+}
+
+.weather {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: white;
+	width: 400px;
+	padding: 0;
+	border-bottom-left-radius: 10px;
+	text-align: center;
+	font-family: sans-serif;
+	opacity: 0.8;
+}
+
+.weather h1 {
+	font-size: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+.weather h1.title {
+	font-size: 18px;
+}
+
+.weather .details {
+	list-style: none;
+	font-size: 16px;
+	width: 300px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.weather .details > li {
+	text-align: left;
+	line-height: 32px;
+}
+
+.weather .details img.icon {
+	float: left;
+	height: 32px;
+	width: 32px;
+}
+
+.btn-group {
+	position: absolute;
+	bottom: 0;
+	width: 200px;
+	background: rgba(255,255,255,0.6);
+	left: 50%;
+	margin-left: -100px;
+	text-align: center;
+	padding: 0.2em;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}

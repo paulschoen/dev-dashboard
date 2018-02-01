@@ -1,0 +1,31 @@
+
+  <div class="container">
+    <div class="streams-list">
+      <ul>
+        <li class="{{if firstStream 'active'}}">
+          <img class="stream" src="http://151.204.229.184:10202/nphMotionJpeg?Resolution=640x480&Quality=Standard">
+          <div class="weather marthas-vineyard-weather"></div>
+        </li>
+        <li class="{{if secondStream 'active'}}">
+          <object type="application/x-shockwave-flash" id="player-container" name="player-container" data="http://www.streamn.com/FlashPlayer/player-quick.swf" style="visibility: visible;">
+            <param name="allowFullScreen" value="false">
+            <param name="allowScriptAccess" value="sameDomain">
+            <param name="bgcolor" value="transparent">
+            <param name="wmode" value="transparent">
+            <param name="flashvars" value="rtmp=rtmp://64.182.45.206:5119/alpaca1&amp;autoplay=true&amp;showMetadata=true&amp;showLiveCaption=true&amp;livelabelshowbg=false&amp;showErrorInPlayer=true&amp;autoReconnect=false&amp;playerID=player-container">
+          </object>
+          <div class="weather loveland-weather"></div>
+        </li>
+        <li class="{{if thirdStream 'active'}}">
+          <object type="application/x-shockwave-flash" id="player-container" name="player-container" data="http://www.streamn.com/FlashPlayer/player-quick.swf" style="visibility: visible;">
+            <param name="allowFullScreen" value="true">
+            <param name="allowScriptAccess" value="sameDomain">
+            <param name="bgcolor" value="transparent">
+            <param name="wmode" value="transparent">
+            <param name="flashvars" value="rtmp=rtmp://64.182.45.206:5119/bluemoon1&amp;autoplay=true&amp;showMetadata=true&amp;showLiveCaption=true&amp;livelabelshowbg=false&amp;showErrorInPlayer=true&amp;autoReconnect=false&amp;playerID=player-container">
+          </object>
+          <div class="weather salt-lake-city-weather"></div>
+        </li>
+      </ul>
+    </div>
+  </div>

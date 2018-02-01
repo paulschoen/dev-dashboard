@@ -1,0 +1,51 @@
+@import 'semantic.css';
+@import 'llama.css';
+
+.grid {
+  display: grid;
+  border-style: solid;
+  border-color: red;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1em;
+  width: 100vw;
+  height: 100vh;
+}
+
+.clock {
+  grid-column: 4;
+  grid-row: 1;
+  height: 100%;
+  margin: 1em;
+}
+.clock-content {
+  height: 100%;
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.clock-content .time{
+  font-size: 6em;
+  grid-row: 1;
+  align-self: flex-end;
+  text-align: center;
+}
+.clock-content .date{
+  font-size: 1.5em;
+  grid-row: 2;
+  align-self: center;
+  text-align: center;
+}
+.llama {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  height: 100%;
+  margin: 1em;
+}
+.llama iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+  zoom: 0.25%;
+}
